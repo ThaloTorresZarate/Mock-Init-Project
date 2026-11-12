@@ -1,7 +1,7 @@
-package persistence.entity.service;
+package com.softer.mockinitproject.service;
 
-import persistence.entity.Player;
-import persistence.entity.repository.PlayerRepositoryImpl;
+import com.softer.mockinitproject.entity.Player;
+import com.softer.mockinitproject.entity.repository.PlayerRepositoryImpl;
 
 import java.util.List;
 
@@ -15,21 +15,21 @@ public class PlayerServiceImpl implements IPlayerService{
 
     @Override
     public List<Player> findAll() {
-        return List.of();
+        return this.playerRepository.findAll();
     }
 
     @Override
     public Player findById(Long id) {
-        return null;
+        return this.playerRepository.findById(id);
     }
 
     @Override
     public void save(Player player) {
-
+        this.playerRepository.save(player);
     }
 
     @Override
     public void deleteById(Long id) {
-
+        this.playerRepository.deleteById(id);
     }
 }

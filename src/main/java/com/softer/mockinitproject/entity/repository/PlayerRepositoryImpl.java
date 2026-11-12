@@ -1,6 +1,6 @@
-package persistence.entity.repository;
+package com.softer.mockinitproject.entity.repository;
 
-import persistence.entity.Player;
+import com.softer.mockinitproject.entity.Player;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ public class PlayerRepositoryImpl implements IPlayerRepository{
     @Override
     public List<Player> findAll() {
         System.out.println(" --> Método findAll real!!");
-        return this.findAll();
+        return this.playerDatabase;
     }
 
     @Override

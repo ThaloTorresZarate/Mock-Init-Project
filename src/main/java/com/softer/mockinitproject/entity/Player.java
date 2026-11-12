@@ -1,4 +1,4 @@
-package persistence.entity;
+package com.softer.mockinitproject.entity;
 
 public class Player {
     private Long id;
@@ -53,9 +53,9 @@ public class Player {
     public String toString() {
         return "Player{" +
                 "id=" + id +
-                " name='" + name + '\'' +
-                " team='" + team + '\'' +
-                " position='" + position + '\'' +
+                ", name='" + name + '\'' +
+                ", team='" + team + '\'' +
+                ", position='" + position + '\'' +
                 '}';
     }
 }

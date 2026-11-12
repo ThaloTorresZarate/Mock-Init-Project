@@ -1,10 +1,10 @@
-package persistence.entity.service;
+package com.softer.mockinitproject.entity.repository;
 
-import persistence.entity.Player;
+import com.softer.mockinitproject.entity.Player;
 
 import java.util.List;
 
-public interface IPlayerService {
+public interface IPlayerRepository {
     List<Player> findAll();
     Player findById(Long id);
     void save(Player player);
