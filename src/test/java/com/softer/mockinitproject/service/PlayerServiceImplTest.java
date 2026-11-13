@@ -1,8 +1,10 @@
 package com.softer.mockinitproject.service;
 
+import com.softer.mockinitproject.DataProvider;
 import com.softer.mockinitproject.entity.Player;
 import com.softer.mockinitproject.entity.repository.PlayerRepositoryImpl;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 import java.util.List;
 
@@ -12,9 +14,11 @@ public class PlayerServiceImplTest {
 
     @Test
     public void testFindAll(){
-        PlayerRepositoryImpl playerRepository = new PlayerRepositoryImpl();
+        PlayerRepositoryImpl playerRepository = Mockito.mock(PlayerRepositoryImpl.class);
         PlayerServiceImpl playerService = new PlayerServiceImpl(playerRepository);
 
+
+        Mockito.when(playerRepository.findAll()).thenReturn(DataProvider.playerListMock());
         List<Player> result = playerService.findAll();
 
         assertNotNull(result);
